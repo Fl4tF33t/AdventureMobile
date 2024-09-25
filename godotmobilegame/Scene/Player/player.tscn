@@ -302,3 +302,4 @@ shape = SubResource("RectangleShape2D_7cgvr")
 position = Vector2(0.5, 0)
 sprite_frames = SubResource("SpriteFrames_j3vsw")
 animation = &"front_idle"
+autoplay = "front_idle"
