@@ -4,11 +4,11 @@ const SPEED:= 100
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	handle_inputs(delta)
+func _physics_process(_delta: float) -> void:
+	handle_inputs()
 	handle_animation()
 
-func handle_inputs(delta):
+func handle_inputs():
 	var direction_x
 	direction_x = Input.get_axis("left", "right")
 	if direction_x:
