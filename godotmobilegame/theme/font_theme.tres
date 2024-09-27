@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://xc7m1q0mqdpn"]
+
+[ext_resource type="FontFile" uid="uid://bjp733nh0v54j" path="res://fonts/PixelOperator8.ttf" id="1_jx10h"]
+
+[resource]
+HeaderLarge/font_sizes/font_size = 32
+HeaderLarge/fonts/font = ExtResource("1_jx10h")
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_jx10h")

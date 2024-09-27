@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsdibnyatmuqf"]
+
+[ext_resource type="PackedScene" uid="uid://cq6r7ny71qaw1" path="res://scene/interactables/interactable.tscn" id="1_cixn8"]
+[ext_resource type="Script" path="res://scene/interactables/flower.gd" id="2_q5fr3"]
+[ext_resource type="Texture2D" uid="uid://daoybunsdl3nq" path="res://graphics/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="2_tff8a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suxtx"]
+size = Vector2(10, 12)
+
+[node name="Flower" instance=ExtResource("1_cixn8")]
+script = ExtResource("2_q5fr3")
+interaction = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_suxtx")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0.5, -1)
+texture = ExtResource("2_tff8a")
+hframes = 4
+vframes = 4
+region_enabled = true
+region_rect = Rect2(0, 128, 64, 64)

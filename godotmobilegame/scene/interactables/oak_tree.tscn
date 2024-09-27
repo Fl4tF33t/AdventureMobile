@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c057n0f8au4l8"]
+
+[ext_resource type="PackedScene" uid="uid://cq6r7ny71qaw1" path="res://scene/interactables/interactable.tscn" id="1_0xbpo"]
+[ext_resource type="Texture2D" uid="uid://bq52u8xn2c83m" path="res://graphics/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree.png" id="2_eqioq"]
+[ext_resource type="Script" path="res://scene/interactables/oak_tree.gd" id="2_xhvro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glm7h"]
+size = Vector2(10, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qnlwc"]
+radius = 21.0
+
+[node name="OakTree" instance=ExtResource("1_0xbpo")]
+script = ExtResource("2_xhvro")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_glm7h")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_eqioq")
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-1, -10)
+shape = SubResource("CircleShape2D_qnlwc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

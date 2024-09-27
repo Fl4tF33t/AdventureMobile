@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhve47eu1rkcf"]
+
+[ext_resource type="Script" path="res://scene/ui/ui.gd" id="1_2eejx"]
+[ext_resource type="Texture2D" uid="uid://dh6q3x4qacjks" path="res://graphics/ui/Tiles/Small tiles/Thin outline/tile_0094.png" id="1_84yws"]
+[ext_resource type="Texture2D" uid="uid://c0q0dnjiyv5o0" path="res://graphics/ui/Tiles/Small tiles/Thin outline/tile_0092.png" id="2_paq5t"]
+[ext_resource type="Texture2D" uid="uid://b3nuurfcxtfqe" path="res://graphics/ui/Tiles/Small tiles/Thin outline/tile_0098.png" id="3_gc3qm"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_2eejx")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="."]
+offset_right = 16.0
+offset_bottom = 16.0
+scale = Vector2(5, 5)
+value = 100.0
+fill_mode = 3
+stretch_margin_left = 4
+stretch_margin_top = 8
+stretch_margin_bottom = 8
+texture_under = ExtResource("1_84yws")
+texture_over = ExtResource("2_paq5t")
+texture_progress = ExtResource("3_gc3qm")
